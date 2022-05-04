@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'modernclock';
+  clock=""
+  clockHandle: any;
+
+  ngOnInit(){
+    this.clockHandle = setInterval(()=>{
+      this.clock = new Date().toLocaleTimeString();
+    },1000);
+  }
 }
+
